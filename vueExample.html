@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue example</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="myapp1">
+        {{msg}}
+        <div>
+            {{msg2}}
+        </div>
+        <img v-bind:src="msg2" alt="">
+        <img :src="'images/'+msg3" alt="" v-show="showMsg3">
+        <img v-for="item in aryImg" :src="'images/'+item" alt="">
+        <!-- <div>
+            {{msg3}} -->
+    </div>
+    <!-- <img :src="msg3" alt=""> -->
+
+</body>
+<script>
+    var vueApp = Vue.createApp({
+        data() {
+            return {
+                msg: 'Hello!',
+                msg2: "images/tokyo.jpg",
+                msg3: "foobar.jpg",
+                showMsg3: true,
+                aryImg: ["a2g.jpg", "markinjapan.jpg", "rpm.jpg"]
+            }
+        }
+    }).mount('#myapp1');
+
+</script>
+
+</html>
