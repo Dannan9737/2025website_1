@@ -8,6 +8,14 @@
   },
   "author": "",
   "license": "ISC",
+  "type": "node.js",
+  "main": "server.js",
+
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  
   "description": "",
   "dependencies": {
     "express": "^5.1.0"
