@@ -65,4 +65,7 @@ server.get("/about", (req, res) => {
     res.send("Welcome " + req.query.user + " to My first NodeJS server!");
 })
 
+server.post("/contact", (req, res) => {
+})
+
 server.listen(80)
