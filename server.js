@@ -2,12 +2,17 @@ var express = require("express");
 var server = express();
 var bodyParser = require("body-parser");
 
+var fileUpload = require("express-fileupload");
+
 server.use(express.static(__dirname + "/Public"));
 server.use(bodyParser.urlencoded());
+server.use(bodyParser.json());
+server.use(fileUpload({limits:{fileSize:2*1024*1024}}))
 
 var DB=require("nedb-promises");
 var ServiceDB = DB.create(__dirname+"/Service.db");
 var PortfolioDB = DB.create(__dirname+"/Portfolio.db");
+var ContactDB = DB.create(__dirname+"/Contact.db");
 
 // ServiceDB.insert([
 //         { icon: 'fa-shopping-cart', title: 'E-Commerce', text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur porro laborum fuga repellat necessitatibus corporis nulla, in ex velit recusandae obcaecati maiores, doloremque quisquam similique, tempora aspernatur eligendi delectus! Rem.' },
@@ -52,7 +57,6 @@ server.get("/portfolio", (req, res) => {
     //     { href: "#portfolioModal3", imgSrc: "img/portfolio/treehouse.png", title: "Treehouse", text: "Website Design" }
     // ]
     PortfolioDB.find({},{_id:0}).then(results=>{
-       
         res.send(results);
     }).catch(error=>{
 
@@ -66,6 +70,14 @@ server.get("/about", (req, res) => {
 })
 
 server.post("/contact", (req, res) => {
+    ContactDB.insert(req.body);
+    //move to public/upload
+    var upFile=req.files.myFile1;
+    upFile.mv(__dirname+"/public/upload/"+upFile.name, function(err){
+
+        res.redirect("/error.html");
+    });
+    res.rediract("/about.html");
 })
 
 server.listen(80)
