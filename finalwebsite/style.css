@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: rgb(22, 22, 22);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+}
+header h1{
+    position: absolute;
+    color: white;
+    left: 120px;
+    top: 0;
+    line-height: 80px;
+    z-index: 2
+}
+header ul{
+    position: absolute;
+    right: 3vw;
+    top: 0;
+    line-height: 80px;
+    z-index: 2
+}
+header li{
+    display: inline-block;
+    margin-right: 4vw;
+}
+header a{
+    color: white;
+    text-decoration: none;
+}
+header a:hover{
+    text-decoration: underline;
+}
+h2{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.col{
+    background-color: rgb(71, 80, 80);
+    height: 100px;
+    width: 100%;;
+}
+.col h2{
+    color: white;
+    line-height: 100px;
+    font-size: 3rem;
+    text-align: center;
+}
+.exp{
+    height: 100vh;
+    background-image: url("images/multimedia_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.exp h2{
+    font-size: 5rem;
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.7);
+}
+.exp p{
+    font-size: 1.5rem;
+    width: 60%;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+.skills{
+    display: flex;
+    background-color: rgb(185, 185, 185);
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 100px 80px;
+}
+.skills div{
+    width: 300px;
+    text-align: center;
+}
+.skills img{
+    width: 100%;
+    border-radius: 10px;
+}
+.skills h3{
+    font-size: 25px;
+}
