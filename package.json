@@ -1,0 +1,17 @@
+{
+  "name": "2025website_1",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "node.js",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nedb-promises": "^6.2.3"
+  }
+}
