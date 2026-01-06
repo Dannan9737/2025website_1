@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多媒體設計</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>多媒體設計系</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="about.html">系所介紹</a></li>
+                <li><a href="courses.html">課程內容</a></li>
+                <li><a href="works.html">作品</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="col">
+            <h2>核心要素與技能</h2>
+        </section>
+        <section class="skills">
+            <div>
+                <img src="images/solution.png" alt="媒體整合" onclick="openModal(this)">
+                <h3>多種媒體整合</h3>
+                <p>結合文字、圖形、音效、動態影像、動畫，創造豐富的視覺體驗。</p>
+            </div>
+            <div>
+                <img src="images/interaction.png" alt="互動體驗" onclick="openModal(this)">
+                <h3>互動與使用者體驗</h3>
+                <p>設計能讓使用者主動參與、產生互動的內容，如 APP、遊戲、互動網頁。</p>
+            </div>
+            <div>
+                <img src="images/digital-tools.png" alt="數位工具" onclick="openModal(this)">
+                <h3>數位工具運用</h3>
+                <p>熟練使用繪圖軟體、動畫製作軟體、影音剪輯工具、程式設計等。</p>
+            </div>
+            <div>
+                <img src="images/knowledge.png" alt="知識" onclick="openModal(this)">
+                <h3>跨領域知識</h3>
+                <p>結合美學基礎（色彩、造形）與科技應用（VR/AR、新媒體藝術）。</p>
+            </div>
+        </section>
+
+        <div id="modal" onclick="closeModal()">
+            <img id="modal-img" alt="作品放大圖">
+        </div>
+    </main>
+</body>
+</html>
