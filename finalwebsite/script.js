@@ -30,14 +30,20 @@ gsap.utils.toArray(".info-card").forEach((card, i) => {
   );
 });
 
-// 背景視差效果
-gsap.to(".info-section", {
-  backgroundPosition: "400px 400px", // 漸變斜向移動
+/* -----------------------------------------------------------work.html------------------------------------------------------------------ */
+gsap.registerPlugin(ScrollTrigger);
+
+const skills = document.querySelector(".skills");
+
+skills.innerHTML += skills.innerHTML += skills.innerHTML;
+
+const totalWidth = skills.scrollWidth / 2;
+
+gsap.to(skills, {
+  x: -totalWidth,
   ease: "none",
-  scrollTrigger: {
-    trigger: ".info-section",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: true // 滾動同步動畫
-  }
+  duration: 20,
+  repeat: -1
 });
+
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
